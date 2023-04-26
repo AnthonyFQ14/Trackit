@@ -86,19 +86,37 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 font-family: sans-serif;
                 text-align: center;
             }
+            .topBar{
+                position: absolute;
+                width: 101.2%;
+                height: 16%;
+                overflow-x: hidden;
+                top: -50px;
+                left: -20px;
+                background-color: #5CF777;
+                z-index: 0;
+                border-bottom: 5px solid black;
+            }
             h1{
+                color: black;
+                position: relative;
                 text-align: left;
-                font-size: 50px;
+                font-size: 70px;
                 padding-bottom: 75px;
+                height: 200px;
                 padding-left: 20px;
+                padding-top: 20px;
+                top: 10px;
+                left: 20px;
             }
             .projectForm{
                 display: none;
                 background-color: white;
                 border-radius: 20px;
-                box-shadow: 0px 0px 10px #ccc;
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
                 padding: 50px;
                 text-align: left;
+                top: 250px;
                 width: 20%;
                 position: absolute;
                 right: 650px;
@@ -114,7 +132,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             }
             .top-right{
                 position: absolute;
-                top: 53px;
+                top: 35px;
                 right: 25px;
             }
             .column {
@@ -130,7 +148,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 clear: both;
             }
             .card {
-                height: 650px;
+                height: 645px;
                 box-shadow: 0px 0px 10px #ccc;
                 background-color: cornflowerblue;
                 padding: 20px;
@@ -141,20 +159,28 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 color: black;
             }
             .projectTitle{
-
+                position: absolute;
                 font-weight: 600;
-                font-size: 35px;
+                font-size: 40px;
+                position: sticky;
+                height:120px;
+                vertical-align: bottom;
+                line-height: 200px;
+                z-index: 1;
+                background-color: lightgrey;
+                bottom: 0;
+                
                 
             }
             .left-nav{
-                position: relative;
-                top: 120px;
+                position: absolute;
+                top: 110px;
                 left: 0;
-                bottom: 150px;
+                bottom: 95px;
                 width: 200px;
                 background-color: lightgrey;
                 overflow-y: scroll;
-                overflow-x: hidden;
+                overflow-x: visible;
                 text-align: center;
                 padding-top: 20px;
                 
@@ -173,6 +199,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 color: black;
                 padding: 20px;
                 width: 160px;
+                
                 text-decoration: none;
                 border-bottom: 1px solid grey;
             }
@@ -191,10 +218,10 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 
             }
             .logout{
-                margin-left:20px;
+                margin-left:10px;
                 font-size: 25px;
-                border-radius: 8px;
-                background-color: lightgray;
+                border-radius: 5px;
+                background-color: white;
                 border: none;
                 border-style: none;
                 font-weight: 500;
@@ -205,7 +232,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             .logout:hover{
                 transition: 0.5s ease;
                 background-color: cornflowerblue; /* change background color on hover */
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             .logout:focus {
                 outline: none; /* remove focus outline */
@@ -213,32 +240,34 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             
             .logoutLabel{
                 font-size: 25px;
+                font-weight: 600;
             }
             label {
-              pointer-events: none;
+                pointer-events: none;
             }
             
             .submit{
                 display: block;
                 margin: 0 auto;
-                background-color: lightgreen;
-                border-radius: 10px;
+                background-color: #5CF777;
+                border-radius: 5px;
                 border: none;
                 border-style: none;
                 font-size: 35px;
+                font-weight: 500;
                 padding-left: 20px;
                 padding-right: 20px;
             }
             .submit:hover{
                 transition: 0.5s ease;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             
             .cancelButton{
                 display: block;
                 margin: 0 auto;
                 background-color: lightgray;
-                border-radius: 10px;
+                border-radius: 5px;
                 border-style: none;
                 font-size: 20px;
                 padding-left: 10px;
@@ -247,7 +276,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             }
             .cancelButton:hover{
                 transition: 0.5s ease;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             .addTicket{
                 position: absolute;
@@ -257,7 +286,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 color: black;
                 font-weight: 600;
                 padding: 10px 20px;
-                border-radius: 10px;
+                border-radius: 5px;
                 font-size: 20px;
                 text-align: center;
                 border: none;
@@ -266,17 +295,17 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             .addTicket:hover{
                 transition: 0.5s ease;
                 background-color: cornflowerblue;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             .createProject{
                 position: absolute;
                 bottom: 25px;
-                left: 14px;
-                background-color: mintcream;
+                left: 375px;
+                background-color: #5CF777;
                 padding: 10px 20px;
                 font-weight: 600;
                 color: black;
-                border-radius: 10px;
+                border-radius: 5px;
                 font-size: 20px;
                 text-align: center;
                 border: none;
@@ -285,42 +314,69 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             .createProject:hover{
                 transition: 0.5s ease;
                 background-color: cornflowerblue;
-                /* box-shadow: 0 2px 4px rgba(0, 0, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             
             .joinProject{
                 position: absolute;
                 color: black;
                 text-align: center;
-                bottom: 80px;
-                left: 14px;
+                bottom: 25px;
+                left: 198px;
                 background-color: #5CF777;
                 font-weight: 600;
                 padding: 10px 20px;
                 padding-left: 30px;
                 padding-right: 32px;
-                border-radius: 10px;
+                border-radius: 5px;
                 font-size: 20px;
                 text-align: center;
                 border: none;
                 border-style: none;
             }
+            
+            .joinProject:hover{
+                transition: 0.5s ease;
+                background-color: cornflowerblue;
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
+            }
+            
+            .leaveProject{
+                position: absolute;
+                color: black;
+                text-align: center;
+                bottom: 25px;
+                left: 5px;
+                background-color: #5CF777;
+                font-weight: 600;
+                padding: 10px 20px;
+                padding-left: 30px;
+                padding-right: 32px;
+                border-radius: 5px;
+                font-size: 20px;
+                text-align: center;
+                border: none;
+                border-style: none;
+            }
+            .leaveProject:hover{
+                transition: 0.5s ease;
+                background-color: red;
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
+            }
+            
             .showProjectId{
                 position: absolute;
                 bottom: 0px;
                 left: 220px;
             }
-            .joinProject:hover{
-                transition: 0.5s ease;
-                background-color: cornflowerblue;
-                box-shadow: 0 2px 4px rgba(50, 50, 0, 1.8); /* add box shadow */
-            }
+            
         
             .ticketForm{
                 display: none;
                 background-color: white;
                 border-radius: 20px;
-                box-shadow: 0px 0px 10px #ccc;
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
+                top: 250px;
                 padding: 50px;
                 text-align: left;
                 width: 20%;
@@ -333,8 +389,9 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 display: none;
                 background-color: white;
                 border-radius: 20px;
-                box-shadow: 0px 0px 10px #ccc;
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
                 padding: 50px;
+                top: 250px;
                 text-align: left;
                 width: 20%;
                 position: absolute;
@@ -342,60 +399,9 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 z-index: 1;
             }
             
-            
-            /* Tooltip container */
-            .tooltip {
-                overflow: visible;
-                z-index: 9999;
-                display: inline-block;
-            }
-            .tooltiptext{
-                position: fixed;
-                z-index: 999;
-                overflow: visible;
-            }
-            /* Tooltip text */
-            .tooltip .tooltiptext {
-                
-                visibility: hidden;
-                overflow: visible;
-                width: 200px;
-                height: 75px;
-                background-color: black;
-                color: #fff;
-                text-align: center;
-                border-radius: 6px;
-                padding: 5px;
-                position: absolute;
-                z-index: 1;
-                top: 12px;
-                left: 108%;
-            }
-
-            /* Tooltip arrow */
-            .tooltip .tooltiptext::before {
-                content: " ";
-                position: absolute;
-                transform: rotate(270deg);
-                left: -11%;
-                top: 28%;
-                margin-left: -5px;
-                border-width: 14px;
-                border-style: solid;
-                border-color: transparent transparent black transparent;
-                overflow: visible;
-            }
-
-            /* Show the tooltip text when you mouse over the tooltip container */
-            .tooltip:hover .tooltiptext {
-                z-index: 1;
-                visibility: visible;
-                overflow: visible;
-            }
-            
             .selected-project {
-              background-color: white;
-              font-weight: bold;
+                background-color: white;
+                font-weight: bold;
             }
             .break{
                 background-color: black;
@@ -408,7 +414,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 text-decoration: none;
                 padding: 10px;
                 font-size: 20px;
-                font-weight: 500;
+                font-weight: 600;
                 margin-bottom: 15px;
                 color: black;
                 border-color: black;
@@ -418,7 +424,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             .ticket:hover{
                 transition: 0.3s ease;
                 background-color: #5CF777;
-                box-shadow: 0 2px 4px rgba(50, 50, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             .error{
                 position: fixed;
@@ -461,36 +467,94 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             .deleteTicket{
                 margin-top: 20px;
                 padding: 15px;
-                border-radius: 10px;
+                border-radius: 5px;
                 border: none;
                 background-color: darkgrey;
-                font-size: 15px;
+                font-size: 18px;
                 font-weight: 600;
             }
             .deleteTicket:hover{
                 transition: 0.5s ease;
                 background-color: red;
-                box-shadow: 0 2px 4px rgba(50, 50, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             
             .ticketCloseButton{
                 margin-top: 15px;
                 padding: 10px;
-                border-radius: 10px;
+                border-radius: 5px;
                 border: none;
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: 500;
             }
             .ticketCloseButton:hover{
                 transition: 0.5s ease;
                 background-color: cornflowerblue;
-                box-shadow: 0 2px 4px rgba(50, 50, 0, 1.8); /* add box shadow */
+                box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
+            }
+            
+            .anchor-container {
+                position: relative;
+                display: inline-block;
+                margin: 0;
+                  padding: 0;
+            }
+
+            .tooltip {
+                width: 400px;
+                height: 75px;
+                position: fixed;
+                bottom: 100px;
+                left: 420px;
+                transform: translateX(-50%);
+                background-color: #333;
+                color: #fff;
+                padding: 5px;
+                font-size: 20px;
+                border-radius: 5px;
+                z-index: 1;
+                display: none;
+            }
+            .tooltip::before {
+                content: " ";
+                position: fixed;
+                transform: rotate(270deg);
+                left: -22.5px;
+                bottom: 31px;
+                margin-left: -5px;
+                color: #333;
+                border-width: 14px;
+                border-style: solid;
+                border-color: transparent transparent #333 transparent;
+            }
+
+            .anchor-container:hover .tooltip {
+                display: block;
+            }
+            
+            .bottomBar{
+                position: absolute;
+                width: 101.2%;
+                overflow-x: hidden;
+                height: 90px;
+                bottom: 0px;
+                left: -20px;
+                background-color: lightgray;
+                z-index: -1;
+                border-top: 5px solid black;
+            }
+            button{
+                cursor: pointer;
+                font-weight: bold;
             }
         </style>
     </head>
     
     <body>
-       <h1>Trackit Plus</h1>
+      <div class="topBar">
+          <h1>Trackit Plus</h1>
+      </div>
+       
         <div class="top-right">
             <label class="logoutLabel" id="logoutLabel" for="logout">Welcome, User</label>
             <button class="logout" id="logout">Logout</button>
@@ -518,16 +582,26 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
          <h2 class="projectTitle">Projects</h2>
          <br>
           <?php foreach ($result as $project): ?>
-            <div class="tooltip">
+           
+            <div class="anchor-container">
+             
               <a href="setProjectId.php?id=<?= $project['id'] ?>" class="<?php if ($project['id'] == $_SESSION['projectId']) { echo 'selected-project'; } ?>" data-projectid= "<?= $project['id'] ?>">
                 <?= $project['projectName'] ?>
+                
+                <span class="tooltip">
+                  Project ID: <?= $project['id'] ?><br>
+                  <?= $project['description'] ?>
+                </span>
+                
               </a>
-              <span class="tooltiptext"><?= $project['description'] ?></span>
+              
             </div>
+            
           <?php endforeach; ?>
+          
+          
         </div>
         
-        <div class="tooltip"><span class="tooltiptext"><p>hello</p></span></div>
         
         <div class="rowOfColumns">
             <div id="todoColumn" class="column">
@@ -649,10 +723,13 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
         </div>
         
         <button class="addTicket" id="addTicket">+ New Ticket</button>
+        <button class="leaveProject" id="leaveProject">Leave Project</button>
         <button class="createProject" id="createProject">Create Project</button>
         <button class="joinProject" id="joinProject">Join Project</button>
         
-        <p class="showProjectId">Current Project Id: <?= htmlspecialchars($_SESSION["projectId"]) ?> </p>
+        <div class="bottomBar"> <h1>hello</h1></div>
+        
+<!--        <p class="showProjectId">Current Project Id: <?= htmlspecialchars($_SESSION["projectId"]) ?> </p>-->
         
         <script>
             
@@ -669,6 +746,8 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             const addTicketButton = document.querySelector(".addTicket");
             
             const ticketForm = document.querySelector(".ticketForm");
+            
+            const leaveProjectButton = document.getElementById("leaveProject");
             
             
             const ticketDisplay = document.querySelector(".ticketDisplay");
@@ -715,6 +794,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 
             });
             
+            
 
             ticketStatusButton.addEventListener('change', function() {
                 const ticketStatusValue = ticketStatusButton.value;
@@ -741,6 +821,39 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 
             });
             
+            var projectId = "<?php echo($_SESSION['projectId']); ?>";
+            
+            leaveProjectButton.addEventListener("click", function() {
+                
+                const confirmation = confirm("Are you sure you want to leave this project?");
+                if (confirmation) {
+                    // User clicked OK, proceed with deletion
+                    // ...
+                    fetch(`leaveProject.php?id=${projectId}`, {
+                        method: 'DELETE'
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                          // Success message
+//                            alert("You have left the project");
+                            window.location.href = "landingPage.php";
+                        } 
+                        else {
+                            alert("Project Leave Failure");
+                          // Error message
+                        }
+                    })
+                    .catch(error => {
+                        // Error message
+                        console.log(error);
+                    });
+                    
+                } else {
+                    // User clicked Cancel, do nothing
+                }
+            });
+            
+            
             deleteTicketButton.addEventListener("click", function() {
                 
                 const confirmation = confirm("Are you sure you want to delete this ticket?");
@@ -753,7 +866,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                     .then(response => {
                         if (response.ok) {
                           // Success message
-                            alert("Ticket Deleted Successfully");
+//                            alert("Ticket Deleted Successfully");
                             window.location.href = "mainPage.php";
                         } 
                         else {
