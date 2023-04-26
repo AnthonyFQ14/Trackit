@@ -44,12 +44,12 @@
        <title>Trackit Login Page</title>
        
        <style>
-          body{
-            font-family: sans-serif;
-            background-color: #f2f2f2;
-            text-align: center;
-          }
-          h1{
+           body{
+               font-family: sans-serif;
+               background-color: #f2f2f2;
+               text-align: center;
+           }
+           h1{
             font-size: 50px;
             padding-bottom: 50px;
           }
@@ -73,6 +73,7 @@
             border-radius: 15px;
             border: 1px solid #ccc;
             width: 100%;
+            
             margin-bottom: 25px;
           }
           button{
@@ -84,21 +85,25 @@
             cursor: pointer;
             font-size: 20px;
             width: 100%;
+            margin-top: 20px;
           }
           .form-footer{
             text-align: center;
             padding-top: 20px;
           }
-           .em{
-               font-size: 20px;
-           }
+          em{
+            
+              position: absolute;
+              left: 785px;
+              top: 435px;
+              font-size: 20px;
+              color: red;
+              text-align: center;
+              
+         }
         </style>
   </head>
   <body>
-  
-    <?php if($is_invalid): ?>
-       <em>Invalid Login</em>
-    <?php endif; ?>
    
    <h1>Bug Tracker Website</h1>
    
@@ -111,6 +116,10 @@
         
         <label for="password">Password:</label>
         <input id="password" type="password" name="password" required>
+        
+        <?php if($is_invalid): ?>
+           <em>Invalid Login</em>
+        <?php endif; ?>
         
         <button type="submit">Login</button>
         
