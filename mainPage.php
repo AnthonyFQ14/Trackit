@@ -97,6 +97,7 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 z-index: 0;
                 border-bottom: 5px solid black;
             }
+            
             h1{
                 color: black;
                 position: relative;
@@ -427,10 +428,14 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             .error{
-                position: fixed;
+                position: relative;
                 text-align: center;
-                left: 650px;
-                top: 305px;
+                padding-top: 10px;
+                margin: -18px;
+/*               
+                left: 675px;
+                top: 360px;
+*/
             }
             .ticketDisplay{
                 display: none;
@@ -547,10 +552,13 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
                 cursor: pointer;
                 font-weight: bold;
             }
+            
         </style>
     </head>
     
     <body>
+     
+     
       <div class="topBar">
           <h1>Trackit Plus</h1>
       </div>
@@ -571,7 +579,6 @@ $sql6 = "SELECT * FROM tickets WHERE projectId = {$_SESSION["projectId"]} AND st
             <script>
                 window.location.href = "loginPage.php";
             </script>
-<!--            <p><a href="loginPage.php">Log in</a> or <a href="signUpPage.php" >sign up</a></p>-->
 
         <?php endif; ?>
         

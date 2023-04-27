@@ -396,10 +396,14 @@ $sql2 = "SELECT projects.*
                 box-shadow: 1px 2px 2px rgba(0,0,0,1.0);
             }
             .error{
-                position: fixed;
+                position: relative;
                 text-align: center;
-                left: 650px;
-                top: 305px;
+                padding-top: 10px;
+                margin: -18px;
+/*               
+                left: 675px;
+                top: 360px;
+*/
             }
             .ticketDisplay{
                 display: none;
@@ -520,7 +524,7 @@ $sql2 = "SELECT projects.*
                 position: absolute;
                 left: 270px;
                 top: 300px;
-                width: 1500px;
+                width: 1300px;
             }
         </style>
     </head>

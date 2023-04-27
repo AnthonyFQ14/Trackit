@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Trackit Sign Up Page</title>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
         <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 <!--        <script src="validation.js" defer></script>-->
         
@@ -66,7 +66,7 @@
     </head>
 
     <body>
-        <h1>Bug Tracker Website</h1>
+        <h1>Trackit Sign Up Page</h1>
         <div class="form-container">
           <form action="addUser.php" id="signup" method="post" novalidate>
            
@@ -102,7 +102,8 @@
         validation
             .addField("#username",[
                 {
-                    rule: "required"
+                    rule: "required",
+                    errorMessage: "Please Enter a Username"
                 },
                 {
                     validator: (value) => () => {

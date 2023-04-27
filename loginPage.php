@@ -105,7 +105,7 @@
   </head>
   <body>
    
-   <h1>Bug Tracker Website</h1>
+   <h1>Trackit Login Page</h1>
    
    <div class="form-container">
      
